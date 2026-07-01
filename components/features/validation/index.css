@@ -1,0 +1,221 @@
+.card-confirmation-main {
+    width: calc(50vw + 160px);
+    height: auto;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(5, 91, 161, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.8) 0px 10px 10px;
+    border-left: 1px solid #d5dde9;
+    border-right: 1px solid #d5dde9;
+}
+
+.button-comp {
+    height: 160px;
+    /* width: 72%; */
+    width: 36vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.confirm-text-t {
+    /* margin-top: 46px; */
+    padding-block: 16px;
+    height: 56px;
+    width: 46vw;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-text-field-t {
+    width: 36vw;
+}
+
+
+.document-confirmation-t {
+    width: 46vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    /* border-radius: 12px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card-confirmation {
+    width: 36vw;
+    /* height: 40vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.label-section-c {
+    font-size: 1.6rem;
+    font-family: Commisioner;
+    margin-top: 16px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.label-section-t {
+    font-size: 1.2rem;
+    width: calc(36vw - 44px);
+    background-color: #d5dde9;
+    font-family: Commisioner;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.comp-confirmation {
+    background-color: #FFFFFF;
+    border: 2px solid #d5dde9;
+    border-radius: 5px;
+    /* height: 20vh; */
+    margin-top: 24px;
+    font-size: 1.2rem;
+    padding-inline: 12px;
+}
+
+.value-label {
+    width: calc(36vw - 24px);
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.value-data {
+    width: 36vw;
+    font-size: 1.2rem;
+    margin-top: 12px;
+}
+
+.modalss {
+    width: 50vw;
+    height: 40vh;
+    background-color: #FFFFFF;
+    padding-inline: 32px;
+    padding-bottom: 32px;
+    overflow: auto;
+}
+
+.pernyataan {
+    padding-left: 20px;
+    text-indent: -17px;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 20vh;
+}
+
+.ps-2 {
+    margin-left: 16px;
+}
+
+@media (max-width: 768px) {
+    .modalss {
+        width: calc(90vw - 64px);
+        min-height: calc(80vh - 32px);
+        font-size: 13px;
+    }
+
+    .pernyataan {
+        padding-left: 20px;
+        text-indent: -14px;
+    }
+
+    .content-text {
+        height: calc(50vh - 32px);
+    }
+
+    .card-confirmation-main {
+        width: 100vw;
+        overflow-x: hidden;
+        height: auto;
+        height: calc(100vh - 60px);
+    }
+
+    .button-comp {
+        height: 120px;
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        /* border-radius: 12px; */
+    }
+
+
+    .document-confirmation-t {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        /* border-radius: 0px; */
+    }
+
+    .confirm-text-t {
+        font-size: 1rem;
+        /* margin-top: 16px; */
+        padding-block: 6px;
+        height: 56px;
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .confirm-text-field-t {
+        width: 80vw;
+    }
+
+    .card-confirmation {
+        width: 80vw;
+        /* height: 40vh; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label-section-c {
+        font-size: 1.2rem;
+        font-family: Commisioner;
+        margin-top: 12px;
+    }
+
+    .value-label {
+        width: calc(80vw - 24px);
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+    }
+
+    .label-section-t {
+        font-size: 1.2rem;
+        width: calc(80vw - 44px);
+        height: 40px;
+        padding-inline: 10px;
+    }
+
+    .value-data {
+        width: 80vw;
+        font-size: 1.2rem;
+        margin-top: 12px;
+    }
+
+}

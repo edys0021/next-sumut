@@ -1,0 +1,406 @@
+.custom-toast {
+    margin-top: 80px;
+}
+
+.war-alert {
+    width: 36vw;
+    color: red;
+    font-size: .9rem;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav {
+    width: 100vw;
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.elogo-sumut {
+    width: auto;
+    height: 60px
+}
+
+.nav-title {
+    color: #28166e;
+    margin-left: 12vw;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-text {
+    font-size: 2rem;
+    font-family: Commisioner;
+}
+
+.progress-bar {
+    margin-top: 42px;
+    width: 46vw;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-title {
+    width: 13vw;
+    margin-top: 16px;
+    font-size: 1.2rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Commisioner;
+}
+
+.progress-start {
+    width: 13vw;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.progress-ongoing {
+    width: 13vw;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.progress-done {
+    width: 13vw;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.box-form {
+    width: 46vw;
+    height: 70vh;
+}
+
+.title-card {
+    width: 46vw;
+    margin-top: 62px;
+}
+
+.title-form {
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-family: Commisioner-Smbold
+}
+
+.button-form {
+    height: 160px;
+    width: 36vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 12px;
+    padding-inline: 5vw;
+}
+
+.button-cancel {
+    width: 120px;
+    height: 60px;
+    background-color: #e7ebee;
+    color: #1e40af;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.button-next {
+    width: 160px;
+    height: 60px;
+    background-color: #1e40af;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.document-form {
+    width: 46vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    /* border-radius: 0px; */
+}
+
+.section-form {
+    font-size: 1.2rem;
+    color: #1e40af;
+    margin-left: 5vw;
+    margin-top: 46px;
+}
+
+.input-form {
+    width: 36vw;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.label-section {
+    font-size: 1.2rem;
+    font-family: Commisioner
+}
+
+.input-field {
+    background-color: #FFFFFF;
+    border: 2px solid #d5dde9;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    padding-inline: 12px;
+}
+
+.input-field:focus {
+    border: 2px solid #accdff;
+    outline: #accdff;
+}
+
+.input-form-textarea {
+    height: 160px;
+    width: 36vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.input-field-textarea {
+    height: 80px;
+    background-color: #FFFFFF;
+    border: 2px solid #d5dde9;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-size: 1.8rem;
+    padding-inline: 12px;
+}
+
+
+.card-form {
+    width: calc(50vw + 160px);
+    height: auto;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(5, 91, 161, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.8) 0px 10px 10px;
+    border-left: 1px solid #d5dde9;
+    border-right: 1px solid #d5dde9;
+}
+
+.card-form-section {
+    margin-top: 24px;
+    background-color: white;
+    width: 46vw;
+    height: auto;
+    margin-bottom: 32px;
+    border: 1px solid rgb(156, 156, 156);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    /* border-radius: 12px; */
+}
+
+@media (max-width: 768px) {
+    .war-alert {
+        width: 80vw;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    .progress-bar {
+        width: 90vw;
+        margin-top: 24px;
+        /* height: 5px; */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .progress-start {
+        width: 26vw;
+        height: 5px;
+        border-radius: 5px;
+    }
+
+    .progress-ongoing {
+        width: 26vw;
+        height: 5px;
+        border-radius: 5px;
+    }
+
+    .progress-done {
+        width: 26vw;
+        height: 5px;
+        border-radius: 5px;
+    }
+
+    .card-form-section {
+        margin-top: 24px;
+        background-color: white;
+        width: 90vw;
+        /* height: auto; */
+        margin-bottom: 10px;
+        /* border-radius: 10px; */
+    }
+
+
+    .title-card {
+        width: 90vw;
+        margin-top: 46px;
+    }
+
+    .title-form {
+        color: #FFFFFF;
+        font-size: 1.6rem;
+    }
+
+    .section-form {
+        font-size: 1rem;
+        color: #1e40af;
+        margin-left: 5vw;
+        margin-top: 32px;
+    }
+
+    .document-form {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        /* border-radius: 0px; */
+    }
+
+    .input-form {
+        width: 80vw;
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+
+    .button-form {
+        height: 140px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 12px;
+        /* background-color: #1e40af; */
+    }
+
+    .button-cancel {
+        width: 100px;
+        height: 50px;
+        background-color: #e7ebee;
+        color: #1e40af;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .button-next {
+        width: 120px;
+        height: 50px;
+        background-color: #1e40af;
+        color: #FFFFFF;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .label-section {
+        font-size: 1.2rem;
+        font-family: Commisioner;
+        /* font-weight: bold; */
+    }
+
+    .input-field {
+        background-color: #FFFFFF;
+        border: 1px solid #78a2c5;
+        border-radius: 5px;
+        height: 50px;
+        margin-top: 12px;
+        font-size: 1rem;
+        padding-inline: 12px;
+    }
+
+    .progress-title {
+        width: 26vw;
+        margin-top: 16px;
+        font-size: .8rem;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Commisioner-Smbold;
+    }
+
+    .card-form {
+        width: 100vw;
+        height: auto;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: #28166e; */
+        border-left: 1px solid #d5dde9;
+        border-right: 1px solid #d5dde9;
+    }
+
+    .elogo-sumut {
+        width: auto;
+        height: 40px;
+        margin-right: 5vw;
+    }
+
+    .nav-title {
+        color: #28166e;
+        height: 40px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .nav-text {
+        font-size: 1.2rem;
+        font-family: Commisioner-Smbold;
+    }
+
+    .nav {
+        width: 100vw;
+        height: 60px;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+}

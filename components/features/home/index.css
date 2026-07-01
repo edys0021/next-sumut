@@ -1,0 +1,161 @@
+.homepage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.title {
+    color: white;
+    font-size: 2.8rem;
+    display: flex;
+    height: 200px;
+    width: 50vw;
+    margin-top: -180px;
+    align-items: center;
+    justify-content: center;
+    font-family: Commisioner;
+}
+
+.category {
+    width: 40vw;
+    min-width: 400px;
+    /* height: 50vh; */
+    display: flex;
+    margin-left: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1vw;
+    column-gap: 3vw;
+    padding-top: 5vh;
+}
+
+.category-card {
+    background-color: white;
+    width: 12vw;
+    min-width: 186px;
+    height: 20vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.icons {
+    width: 120px;
+    height: 120px;
+}
+
+.category-title {
+    font-size: 1.2rem;
+    font-family: Commisioner;
+    font-weight: 600;
+}
+
+.line {
+    width: 28vw;
+    height: 1px;
+    background-color: rgb(153, 153, 153);
+    margin-bottom: 12px;
+}
+
+.ebranch-logo {
+    display: flex;
+    align-items: flex-end;
+    width: auto;
+    height: 100px
+}
+
+.ebranch-logo-sumut {
+    display: flex;
+    align-items: flex-end;
+    width: auto;
+    height: 100px
+}
+
+@media (max-width: 768px) {
+    .ebranch-logo {
+        display: flex;
+        align-items: flex-end;
+        width: auto;
+        height: 60px
+    }
+
+    .ebranch-logo-sumut {
+        display: flex;
+        align-items: flex-end;
+        width: auto;
+        height: 60px
+    }
+
+    .title {
+        color: white;
+        font-size: 2rem;
+        display: flex;
+        height: 120px;
+        width: 100vw;
+        margin-top: -180px;
+        align-items: center;
+        justify-content: center;
+        font-family: Commisioner;
+    }
+
+    .line {
+        width: 80vw;
+    }
+
+    .category-card {
+        background-color: white;
+        width: 90vw;
+        height: 12vh;
+        min-width: 1px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .icons {
+        width: 120px;
+        height: 120px;
+        margin-left: 8vw;
+        margin-right: 5vw;
+        border: 1px solid #0767b6;
+        border-radius: 50%;
+    }
+
+    .category {
+        width: 80vw;
+        height: auto;
+        min-width: 1px;
+        /* margin-left: 10vw; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 24px;
+        padding-top: 5vh;
+        /* background-color: aqua; */
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        font-family: Commisioner;
+        font-weight: 600;
+        color: #3d3d3d;
+    }
+
+    .icons {
+        width: 60px;
+        height: 60px;
+    }
+}

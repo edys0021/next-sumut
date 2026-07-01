@@ -1,0 +1,23 @@
+.nav-title {
+    color: #28166e;
+    margin-left: 12vw;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-text {
+    font-size: 2rem;
+    /* font-family:; */
+    font-family: CommisionerBold;
+}
+
+@media (max-width: 768px) {
+    .nav-title {
+        color: #0058A0;
+        font-size: 2rem;
+        margin-left: 5vw;
+        font-family: Commisioner;
+    }
+
+}
