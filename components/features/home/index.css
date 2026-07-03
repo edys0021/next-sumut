@@ -50,7 +50,7 @@
 
 .icons {
     width: 120px;
-    height: 120px;
+    height: auto;
 }
 
 .category-title {
@@ -77,7 +77,7 @@
     display: flex;
     align-items: flex-end;
     width: auto;
-    height: 100px
+    height: 100;
 }
 
 @media (max-width: 768px) {
@@ -92,7 +92,7 @@
         display: flex;
         align-items: flex-end;
         width: auto;
-        height: 60px
+        height: 60;
     }
 
     .title {
@@ -156,6 +156,6 @@
 
     .icons {
         width: 60px;
-        height: 60px;
+        height: auto;
     }
 }

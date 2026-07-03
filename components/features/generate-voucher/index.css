@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    background-image: url('/public/images/main-background.jpg');
+    background-image: url('/assets/images/main-background.jpg');
     background-size: cover;
     background-position: center;
 }

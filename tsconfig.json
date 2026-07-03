@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/features/e-form/index.tsxa"  ],
   "exclude": ["node_modules"]
 }

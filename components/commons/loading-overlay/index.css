@@ -1,0 +1,23 @@
+.loading-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-overlay--fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loading-overlay--screen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.loading-overlay__image {
+  object-fit: contain;
+}

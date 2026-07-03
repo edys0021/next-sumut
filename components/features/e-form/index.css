@@ -28,7 +28,7 @@
 
 .elogo-sumut {
     width: auto;
-    height: 60px
+    height: 60px;
 }
 
 .nav-title {
@@ -99,7 +99,7 @@
 
 .button-form {
     height: 160px;
-    width: 36vw;
+    width: 46vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -166,15 +166,47 @@
     background-color: #FFFFFF;
     border: 2px solid #d5dde9;
     border-radius: 5px;
+    box-sizing: border-box;
     height: 50px;
     margin-top: 12px;
     font-size: 1.2rem;
     padding-inline: 12px;
+    width: 100%;
+}
+
+.input-field--disabled {
+    background-color: #EEEEEE;
+    border-block-color: #C9CDCF;
 }
 
 .input-field:focus {
     border: 2px solid #accdff;
     outline: #accdff;
+}
+
+.amount-input-row {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.amount-currency {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    justify-content: center;
+    min-width: 64px;
+    margin-top: 12px;
+    padding-inline: 8px;
+    text-align: center;
+}
+
+.amount-value {
+    margin-top: 0;
+    min-width: 0;
 }
 
 .input-form-textarea {
@@ -303,7 +335,8 @@
 
     .button-form {
         height: 140px;
-        width: 90%;
+        width: 100%;
+        /* width: 80vw; */
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -345,10 +378,28 @@
         background-color: #FFFFFF;
         border: 1px solid #78a2c5;
         border-radius: 5px;
+        box-sizing: border-box;
         height: 50px;
         margin-top: 12px;
         font-size: 1rem;
         padding-inline: 12px;
+        width: 100%;
+    }
+
+    .input-field--disabled {
+        background-color: #EEEEEE;
+        border-block-color: #C9CDCF;
+    }
+
+    .amount-input-row {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .amount-currency {
+        font-size: .95rem;
+        min-width: 58px;
+        padding-inline: 6px;
     }
 
     .progress-title {

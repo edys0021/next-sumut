@@ -89,26 +89,6 @@ const DISABLED_INPUT_STYLE: CSSProperties = {
     borderBlockColor: "#C9CDCF",
 };
 
-const IDR_INPUT_STYLE: CSSProperties = {
-    ...DISABLED_INPUT_STYLE,
-    width: "64px",
-    minWidth: "64px",
-};
-
-const AMOUNT_INPUT_STYLE: CSSProperties = {
-    flex: 1,
-    minWidth: 0,
-    width: "auto",
-};
-
-const AMOUNT_ROW_STYLE: CSSProperties = {
-    display: "flex",
-    width: "100%",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "12px",
-};
-
 const createInitialTarikanForm = (): TarikanTunaiForm => {
     if (getStoredTransactionCategory() !== TRANSACTION_CATEGORY.WITHDRAW) {
         return { ...EMPTY_TARIKAN_FORM };
@@ -513,21 +493,16 @@ export default function EformComp() {
                 </InputGroup>
                 {valTt.name && <WarningMessage>* Nama Pemilik Rekening Tidak Ditemukan</WarningMessage>}
                 <InputGroup label="Jumlah">
-                    <div style={AMOUNT_ROW_STYLE}>
+                    <div className="amount-input-row">
+                        <div className="input-field input-field--disabled amount-currency" aria-hidden="true">
+                            IDR
+                        </div>
                         <input
                             autoComplete="off"
-                            className="input-field"
-                            disabled
-                            style={IDR_INPUT_STYLE}
-                            value="IDR"
-                        />
-                        <input
-                            autoComplete="off"
-                            className="input-field"
+                            className="input-field amount-value"
                             inputMode="numeric"
                             name="tt-amount"
                             onChange={changeTt}
-                            style={AMOUNT_INPUT_STYLE}
                             type="text"
                             value={tt["tt-amount"]}
                         />
@@ -602,21 +577,16 @@ export default function EformComp() {
                 </InputGroup>
                 {valSt.name && <WarningMessage>* Nama Pemilik Rekening Tidak Ditemukan</WarningMessage>}
                 <InputGroup label="Jumlah">
-                    <div style={AMOUNT_ROW_STYLE}>
+                    <div className="amount-input-row">
+                        <div className="input-field input-field--disabled amount-currency" aria-hidden="true">
+                            IDR
+                        </div>
                         <input
                             autoComplete="off"
-                            className="input-field"
-                            disabled
-                            style={IDR_INPUT_STYLE}
-                            value="IDR"
-                        />
-                        <input
-                            autoComplete="off"
-                            className="input-field"
+                            className="input-field amount-value"
                             inputMode="numeric"
                             name="st-amount"
                             onChange={changeSt}
-                            style={AMOUNT_INPUT_STYLE}
                             type="text"
                             value={st["st-amount"]}
                         />

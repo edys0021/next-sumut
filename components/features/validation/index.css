@@ -100,45 +100,149 @@
     margin-top: 12px;
 }
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(7, 24, 51, 0.6);
+    backdrop-filter: blur(4px);
+}
+
 .modalss {
-    width: 50vw;
-    height: 40vh;
-    background-color: #FFFFFF;
-    padding-inline: 32px;
-    padding-bottom: 32px;
+    width: min(760px, 100%);
+    max-height: min(80vh, 760px);
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px 28px 28px;
     overflow: auto;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
+    border: 1px solid #dbe4f0;
+    box-sizing: border-box;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.modal-title {
+    margin: 0;
+    color: #102a43;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 999px;
+    background: #f3f6fb;
+    color: #c2410c;
+    font-size: 1.35rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #fde7e7;
+    transform: scale(1.03);
+}
+
+.modal-divider {
+    height: 1px;
+    background: linear-gradient(90deg, #dbe4f0 0%, #1e40af 100%);
+    margin-bottom: 14px;
+}
+
+.modal-subtitle {
+    margin: 0 0 12px;
+    color: #334155;
+    font-size: 0.98rem;
+    line-height: 1.6;
 }
 
 .pernyataan {
     padding-left: 20px;
     text-indent: -17px;
+    color: #334155;
+    line-height: 1.6;
 }
 
 .content-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    min-height: 20vh;
+    gap: 12px;
+    max-height: 50vh;
+    overflow: auto;
+    padding-right: 4px;
 }
 
 .ps-2 {
     margin-left: 16px;
 }
 
+.modal-agreement {
+    margin-top: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.modal-agreement input {
+    margin-top: 3px;
+    accent-color: #1e40af;
+}
+
+.textindent {
+    color: #334155;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
 @media (max-width: 768px) {
+    .modal-overlay {
+        padding: 16px;
+    }
+
     .modalss {
-        width: calc(90vw - 64px);
-        min-height: calc(80vh - 32px);
+        width: 100%;
+        max-height: 90vh;
+        padding: 20px 16px 20px;
+        border-radius: 12px;
         font-size: 13px;
     }
 
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-subtitle {
+        font-size: 0.92rem;
+    }
+
     .pernyataan {
-        padding-left: 20px;
+        padding-left: 18px;
         text-indent: -14px;
     }
 
     .content-text {
-        height: calc(50vh - 32px);
+        max-height: none;
+    }
+
+    .modal-agreement {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .card-confirmation-main {

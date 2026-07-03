@@ -1,11 +1,30 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import MainLayout from "@/components/layout/main-layout";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { ConfigProvider } from "@/providers/config-provider";
+import localFont from "next/font/local";
+import Script from "next/script";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const commissioner = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/Commissioner-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/Commissioner-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/Commissioner-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "E-Branch Sumut",
@@ -18,13 +37,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="id" className={commissioner.variable}>
       <body>
-        <ConfigProvider>
-        <MainLayout>
-          {children}
-        </MainLayout>
-        </ConfigProvider>
+          <Script src="/env.js" strategy="beforeInteractive" />
+          <MainLayout>
+            {children}
+          </MainLayout>
       </body>
     </html>
   );
