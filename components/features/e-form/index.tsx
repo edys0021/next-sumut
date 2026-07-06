@@ -8,7 +8,6 @@ import {
     useEffect,
     useState,
 } from "react";
-import axios from "axios";
 import Cookies from "js-cookie";
 import moment from "moment";
 import { useRouter } from "next/navigation";
@@ -18,7 +17,6 @@ import LoadingOverlay from "@/components/commons/loading-overlay";
 import Navbar from "@/components/commons/navbar";
 import sensorNama from "@/lib/censor";
 import convertString from "@/lib/converter";
-import d from "@/lib/decryptor";
 import e from "@/lib/encryptor";
 import formatCurrency from "@/lib/formatter";
 import {
@@ -32,7 +30,7 @@ import {
     WITHDRAW_COOKIE,
 } from "@/lib/transaction-storage";
 import isValidNominal from "@/lib/validator";
-import { env } from "@/config/env";
+import { useRecNumbApi } from "@/hooks/useRecNumbApi";
 
 type TarikanTunaiForm = {
     "tt-rek": string;
@@ -193,8 +191,8 @@ export default function EformComp() {
     const router = useRouter();
     const category = useStoredTransactionCategory();
     const title = category ? TRANSACTION_TITLE[category] : undefined;
+    const { loading, getName } = useRecNumbApi();
 
-    const [loading, setLoading] = useState(false);
     const [validNomTt, setValidNomTt] = useState(true);
     const [validNomSt, setValidNomSt] = useState(true);
     const [valTt, setValtt] = useState<Record<TarikanValidationField, boolean>>({
@@ -257,47 +255,14 @@ export default function EformComp() {
         }
     };
 
-    const getName = async (payload: { timestamp: string; content: string }) => {
-        setLoading(true);
-
-        try {
-            const { data } = await axios({
-                method: "POST",
-                url: `${env.serverIp}/account-number/get-validation`,
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                data: JSON.stringify(payload),
-            });
-            const { content } = data;
-            const { accountName, branchId } = JSON.parse(d(content));
-
-            Cookies.set("branchId", branchId, { expires: 1 });
-
-            return accountName as string;
-        } catch (error: unknown) {
-            if (axios.isAxiosError(error)) {
-                if (error.response) {
-                    console.error("Server error:", {
-                        status: error.response.status,
-                        data: error.response.data,
-                    });
-                } else if (error.request) {
-                    console.error("No response from server:", error.request);
-                } else {
-                    console.error("Request setup error:", error.message);
-                }
-            } else {
-                console.error("Unexpected error:", error);
-            }
-
+    const getRecName = async (payload: { timestamp: string; content: string }) => {
+        const account = await getName(payload);
+        if (!account.success) {
             markAccountNameInvalid();
-
-            return "";
-        } finally {
-            setLoading(false);
+            return;
         }
+
+        return account.accountName as string;
     };
 
     const changeTt = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -335,10 +300,10 @@ export default function EformComp() {
 
             if (value.length === 14) {
                 event.target.blur();
-                nextAccountName = await getName({
+                nextAccountName = (await getRecName({
                     timestamp: timestampNow(),
                     content: e(JSON.stringify({ recNumb: value })),
-                });
+                })) ?? "";
             } else if (value.length < 14) {
                 nextAccountName = "";
                 setValtt((prev) => ({ ...prev, name: false }));
@@ -415,10 +380,11 @@ export default function EformComp() {
 
             if (value.length === 14) {
                 event.target.blur();
-                nextAccountName = await getName({
-                    timestamp: timestampNow(),
-                    content: e(JSON.stringify({ recNumb: value })),
-                });
+                nextAccountName =
+                    (await getRecName({
+                        timestamp: timestampNow(),
+                        content: e(JSON.stringify({ recNumb: value })),
+                    })) || "";
             } else if (value.length < 14) {
                 nextAccountName = "";
             }
