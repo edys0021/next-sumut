@@ -96,7 +96,7 @@ export default function ValidationComp() {
 
         axios({
             method: "POST",
-            url: `${env.serverIp}/formSubmission`,
+            url: `${env.serverIp}/transactions/form-submission`,
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",

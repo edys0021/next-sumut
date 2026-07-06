@@ -263,7 +263,7 @@ export default function EformComp() {
         try {
             const { data } = await axios({
                 method: "POST",
-                url: `${env.serverIp}/getRecName`,
+                url: `${env.serverIp}/account-number/get-validation`,
                 headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json",
